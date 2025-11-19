@@ -215,16 +215,24 @@
     /* Adjust placement for mobile screens */
     @media (max-width: 576px) {
         .sticky-social-bar {
-            top: auto;           /* Disable the middle alignment */
-            transform: none;     /* Disable the centering transform */
+            /* Ensure it stays in the middle vertically */
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: auto;  /* Remove bottom positioning */
             
-            /* Position it at the bottom-left, above the bottom navigation */
-            bottom: 80px;        
-            left: 10px;
+            /* Keep it on the left */
+            left: 5px;     /* Slightly closer to edge on small screens */
             
-            /* Stack them vertically */
-            flex-direction: column; 
-            gap: 10px;
+            /* Stack vertically */
+            flex-direction: column;
+            gap: 8px;      /* Slightly smaller gap for mobile */
+        }
+        
+        /* Optional: Make icons slightly smaller on mobile to save space */
+        .sticky-social-bar a {
+            width: 35px;
+            height: 35px;
+            font-size: 18px;
         }
     }
   </style>
@@ -3655,14 +3663,14 @@
             <ul class="social-link">
 
               <li class="footer-nav-item">
-                <a href="#" class="footer-nav-link">
+                <a href="https://www.facebook.com/share/1A9r8caCQg/" target="_blank" class="facebook">
                   <ion-icon name="logo-facebook"></ion-icon>
                 </a>
               </li>
 
               <li class="footer-nav-item">
-                <a href="#" class="footer-nav-link">
-                  <ion-icon name="logo-linkedin"></ion-icon>
+                <a href="https://www.instagram.com/tr.adityasingh/" target="_blank" class="instagram">
+                  <ion-icon name="logo-instagram"></ion-icon>
                 </a>
               </li>
 
