@@ -3718,7 +3718,7 @@
       </div>
       <div class="chatbot-messages" id="chatbot-messages">
         <div class="message bot">
-          Welcome! I'm the Anon virtual assistant. How can I help you today? Ask me about **Shipping**, **Returns**, or **Orders**.
+          Welcome! I'm the Anon virtual assistant. How can I help you today? Ask me about Products, Shipping, Returns, or Orders.
         </div>
       </div>
       <div class="chatbot-input-box">
@@ -3770,15 +3770,15 @@
         
         // Simple mock response logic for demonstration
         setTimeout(() => {
-            let response = "I'm sorry, I couldn't find an immediate answer for that. Please try asking about **Shipping**, **Returns**, or **Orders**, or wait for a live agent.";
+            let response = "I'm sorry to hear that. Could you please share your name and contact number so our support team can reach out and assist you?";
             const lowerText = text.toLowerCase();
 
             if (lowerText.includes('shipping') || lowerText.includes('ship')) {
-                response = "Good news! Shipping is **free** for orders over $55 this week. Delivery typically takes 5-7 business days.";
+                response = "Good news! Shipping is free for orders over ₹200 this week. Delivery typically takes 5-7 business days.";
             } else if (lowerText.includes('return') || lowerText.includes('exchange')) {
-                response = "We offer an **easy & free return policy** within 30 days of purchase. Please ensure the item is unused and has all original tags.";
+                response = "We offer an easy & free return policy within 7 days of purchase. Please ensure the item is unused and has all original tags.";
             } else if (lowerText.includes('order') || lowerText.includes('status')) {
-                response = "To check your order status, please provide your **Order Number**. You can also find tracking information in your email confirmation.";
+                response = "To check your order status, please provide your Order Number. You can also find tracking information in your email confirmation.";
             } else if (lowerText.includes('hello') || lowerText.includes('hi') || lowerText.includes('hey')) {
                 response = "Hello! I'm the Anon virtual assistant. How can I assist you with your purchase?";
             }
@@ -3808,4 +3808,5 @@
 
 
 </html>
+
 
