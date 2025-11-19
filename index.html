@@ -213,15 +213,18 @@
     }
 
     /* Adjust placement for mobile screens */
-    /* We switch back to horizontal-bottom for phones to prevent blocking content */
     @media (max-width: 576px) {
         .sticky-social-bar {
-            top: auto;           /* Reset top */
-            transform: none;     /* Reset transform */
-            bottom: 60px;        /* Move above mobile nav */
+            top: auto;           /* Disable the middle alignment */
+            transform: none;     /* Disable the centering transform */
+            
+            /* Position it at the bottom-left, above the bottom navigation */
+            bottom: 80px;        
             left: 10px;
-            gap: 5px;
-            flex-direction: row; /* Horizontal on mobile */
+            
+            /* Stack them vertically */
+            flex-direction: column; 
+            gap: 10px;
         }
     }
   </style>
